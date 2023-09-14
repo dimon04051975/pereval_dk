@@ -2,7 +2,7 @@ from drf_writable_nested import WritableNestedModelSerializer
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 
-from pereval.models import Users, Pereval, Images, Coords
+from .models import Users, Pereval, Images, Coords
 
 
 class UsersSerializer(serializers.ModelSerializer):
@@ -77,7 +77,7 @@ class PerevalDetailSerializer(WritableNestedModelSerializer):
                     or user.phone != user_data.get('phone'):
                 raise ValidationError({'message': 'Редактирование пользовательских данных запрещено'})
             return data
-pereval.models import Users, Pereval, Images, Coords
+
 
 
 class UsersSerializer(serializers.ModelSerializer):

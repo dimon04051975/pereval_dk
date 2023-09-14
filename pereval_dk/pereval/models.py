@@ -1,6 +1,6 @@
 from django.db import models
-from pereval.resources import STATUS, LEVEL
-from pereval.utils import get_image_path
+from .resources import STATUS, LEVEL
+from .utils import get_image_path
 
 
 class Users(models.Model):

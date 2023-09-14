@@ -21,10 +21,10 @@ from drf_yasg.views import get_schema_view
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Snippets API",
-        default_version='v1',
-        description="Pereval API",
-        terms_of_service="https://www.google.com/policies/terms/",
+        title="Simple Inventory API",
+        default_version='1.0.0',
+        description="This is a simple API",
+        terms_of_service="https://virtserver.swaggerhub.com/DIMON04051975_1/PerevalDK/1.0.0",
         contact=openapi.Contact(email="raingts@mail.ru"),
         license=openapi.License(name="BSD License"),
     ),

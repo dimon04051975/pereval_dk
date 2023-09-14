@@ -3,8 +3,8 @@ from rest_framework import mixins, generics, status
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 
-from pereval.models import Pereval
-from pereval.serializers import PerevalSerializer, PerevalDetailSerializer
+from .models import Pereval
+from .serializers import PerevalSerializer, PerevalDetailSerializer
 
 
 class SubmitData(mixins.CreateModelMixin,

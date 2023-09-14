@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pereval.apps.PerevalConfig',
     'pereval_dk',
-    'pereval',
     'django.contrib.sites',
     'django.contrib.flatpages',
     'rest_framework',
