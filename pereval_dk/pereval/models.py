@@ -5,8 +5,8 @@ from .utils import get_image_path
 
 class Users(models.Model):
     first_name = models.CharField(max_length=15, verbose_name='Имя')
-    last_name = models.CharField(max_length=20, verbose_name='Фамилия')
     patronymic = models.CharField(max_length=20, verbose_name='Отчество')
+    last_name = models.CharField(max_length=20, verbose_name='Фамилия')
     email = models.EmailField(max_length=30, verbose_name='Электронная почта')
     phone = models.CharField(max_length=12, help_text='Формат ввода: +70123456789', verbose_name='Телефон')
 
