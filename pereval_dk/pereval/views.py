@@ -2,8 +2,8 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import mixins, generics, status
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
-
-from .models import Pereval
+from rest_framework import viewsets
+from .models import *
 from .serializers import PerevalSerializer, PerevalDetailSerializer
 
 

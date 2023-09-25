@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pereval.apps.PerevalConfig',
-    'pereval_dk',
     'django.contrib.sites',
     'django.contrib.flatpages',
     'rest_framework',
@@ -90,10 +89,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-#         'USER': os.getenv('FSTR_DB_LOGIN'),
-#         'PASSWORD': os.getenv('FSTR_DB_PASS'),
-#         'HOST': os.getenv('FSTR_DB_HOST'),
-#         'PORT': os.getenv('FSTR_DB_PORT'),
+        'USER': os.getenv('FSTR_DB_LOGIN'),
+        'PASSWORD': os.getenv('FSTR_DB_PASS'),
+        'HOST': os.getenv('FSTR_DB_HOST'),
+        'PORT': os.getenv('FSTR_DB_PORT'),
     }
 }
 # DATABASES = {

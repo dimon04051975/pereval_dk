@@ -19,6 +19,7 @@ class Users(models.Model):
 
 
 class Pereval(models.Model):
+    objects = None
     beauty_title = models.CharField(max_length=255, blank=True, verbose_name='Префикс')
     title = models.CharField(max_length=255, blank=True, verbose_name='Название')
     other_titles = models.CharField(max_length=255, blank=True, verbose_name='Другое название')

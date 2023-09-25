@@ -1,9 +1,9 @@
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
-
-from pereval.models import Pereval, Coords, Users, Images
-from pereval.serializers import PerevalSerializer, PerevalDetailSerializer
+from pereval_dk.pereval.resources import STATUS, LEVEL
+from pereval_dk.pereval.models import Pereval, Coords, Users, Images
+from pereval_dk.pereval.serializers import PerevalSerializer, PerevalDetailSerializer
 
 
 class SubmitDataGetAPITests(APITestCase):
