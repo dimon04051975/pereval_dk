@@ -45,43 +45,36 @@
 
 ```JSON
 {
-"beauty_title": "пер.",
-"title": "Дятлова",
-"other_titles": "седл.",
-"connect": "0",
-"add_time": "2023-02-20 00:13:14",
-"user": {
-    "email": "mxrainy@gmail.com",
-    "name": "Максим",
-    "second_name": "Максимов",
-    "otc": "Максимович",
-    "phone": "88005553535"
-    },
+    "id": 1,
+    "beauty_title": "перевал5",
+    "title": "тестовый6",
+    "other_titles": "test6",
+    "connect": "",
+    "add_time": "2023-09-14T23:36:32.285904+03:00",
+    "status": "new",
+    "level": "winter-1A",
     "coordinates": {
-        "latitude": "33.3333",
-        "longitude": "11.1111",
-        "height": "2222"
+        "id": 2,
+        "latitude": 42.92902,
+        "longitude": 42.35775,
+        "height": 2978
     },
-    "level": {
-        "winter": "2А",
-        "summer": "1А*",
-        "autumn": "1А",
-        "spring": "2A*"
+    "user": {
+        "id": 2,
+        "first_name": "Дмитрий",
+        "patronymic": "Евгеньевич",
+        "last_name": "Каштанов",
+        "email": "dimon04051975@mail.ru",
+        "phone": "+79183368315"
     },
-    "images": [
-        {
-        "data": "image1",
-        "title": "Основание"
-        },
-        {
-        "data": "image2",
-        "title": "Седло"
-        },
-        {
-        "data": "image3",
-        "title": "Обрыв"
-        }
-    ]
+    "images": {
+        "title_1": "фото1",
+        "image_1": "https://s0.rbk.ru/v6_top_pics/resized/600xH/media/img/0/75/756569399522750.jpg",
+        "title_2": "foto2",
+        "image_2": "https://s0.rbk.ru/v6_top_pics/resized/600xH/media/img/0/75/756569399522750.jpg",
+        "title_3": "",
+        "image_3": ""
+    }
 }
 ```
 
@@ -119,50 +112,36 @@
 
 ```JSON
 {
-"id": 8,
-"user": {
-    "email": "mxrainy@gmail.com",
-    "name": "Максим",
-    "second_name": "Максимов",
-    "otc": "Максимович",
-    "phone": "88005553535"
-    },
+    "id": 1,
+    "beauty_title": "перевал5",
+    "title": "тестовый6",
+    "other_titles": "test6",
+    "connect": "",
+    "add_time": "2023-09-14T23:36:32.285904+03:00",
+    "status": "new",
+    "level": "winter-1A",
     "coordinates": {
-        "id": 1,
-        "latitude": 777.11,
-        "longitude": 55.77,
-        "height": 1111
-    },
-    "levels": {
         "id": 2,
-        "winter": "1С",
-        "summer": "1А*",
-        "autumn": "1А",
-        "spring": "1С*"
+        "latitude": 42.92902,
+        "longitude": 42.35775,
+        "height": 2978
     },
-    "images": [
-        {
-        "id": 3,
-        "created": "2023-02-20T10:44:29.555124",
-        "title": "Основание",
-        "data": "",
-        "pass": 8
-        },
-        {
-        "id": 22,
-        "created": "2022-12-22T10:46:29.777144",
-        "title": "Седло",
-        "data": "",
-        "pass": 8
-        }
-        ],
-    "created": "2023-02-22T10:41:38.631576",
-    "beauty_title": "пер.",
-    "title": "дятлова",
-    "other_titles": "пере.",
-    "connect": "0",
-    "add_time": "2023-02-20T01:10:11",
-    "status": "new"
+    "user": {
+        "id": 2,
+        "first_name": "Дмитрий",
+        "patronymic": "Евгеньевич",
+        "last_name": "Каштанов",
+        "email": "dimon04051975@mail.ru",
+        "phone": "+79183368315"
+    },
+    "images": {
+        "title_1": "фото1",
+        "image_1": "https://s0.rbk.ru/v6_top_pics/resized/600xH/media/img/0/75/756569399522750.jpg",
+        "title_2": "foto2",
+        "image_2": "https://s0.rbk.ru/v6_top_pics/resized/600xH/media/img/0/75/756569399522750.jpg",
+        "title_3": "",
+        "image_3": ""
+    }
 },
 ```
 
@@ -191,8 +170,26 @@
 <h4>Примеры JSON-ответов:</h4>
 
 ```
-{ "status": 200, "message": "Success", "state": 1 }
-{ "status": 400, "message": "It's not a NEW status of the record", "state": 0}
+HTTP 200 OK
+Allow: GET, PATCH, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+{
+    "state": 1,
+    "message": "Данные успешно отредактированы"
+}
+HTTP 200 OK
+Allow: GET, PATCH, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+{
+    "state": 0,
+    "message": {
+        "status": [
+            "Значения new1 нет среди допустимых вариантов."
+        ]
+    }
+}
 ```
 
 <h3>Метод <i>GET+email</i> /submitData/?user_email=email</h3>
@@ -201,5 +198,5 @@
 Пример запроса:
 
 ```
-GET /submitData/?user_email=maxrainy@agmail.com
+GET /submitData/?user_email=dimon04051975@mail.ru
 ```
