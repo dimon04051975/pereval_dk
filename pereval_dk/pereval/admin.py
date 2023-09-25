@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from pereval.models import Pereval, Images, Coords, Users
+from .models import Pereval, Images, Coords, Users
 
 
 class UsersAdmin(admin.ModelAdmin):
